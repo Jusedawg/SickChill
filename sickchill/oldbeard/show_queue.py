@@ -636,7 +636,7 @@ class QueueItemUpdate(ShowQueueItem):
         action = ShowQueueActions.FORCEUPDATE if force else ShowQueueActions.UPDATE
         super(QueueItemUpdate, self).__init__(action, show)
         self.force = force
-        self.priority = generic_queue.QueuePriorities.HIGH
+        self.priority = generic_queue.QueuePriorities.NORMAL
 
     def run(self):
         super(QueueItemUpdate, self).run()
